@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo Application</title>
+    <script defer src="tsmemo.js"></script>
+    <style>
+      /* 스타일 */
+      .memo-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .memo-input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .memo-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .memo-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+      }
+
+      .memo-item .memo-content {
+        flex-grow: 1;
+      }
+
+      .memo-item .memo-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .memo-item .delete-button {
+        color: #919191;
+        cursor: pointer;
+      }
+
+      .memo-item .modify-button {
+        color: #919191;
+        cursor: pointer
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="memo-container">
+      <h1>Memo Application</h1>
+      <form id="memo-form">
+        <input
+          type="text"
+          id="memo-input"
+          class="memo-input"
+          placeholder="Enter memo..."
+          required
+        />
+        <button type="submit">Add Memo</button>
+      </form>
+      <ul id="memo-list" class="memo-list"></ul>
+    </div>
+    
